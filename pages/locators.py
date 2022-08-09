@@ -19,3 +19,8 @@ class ProductPageLocators:
         By.CSS_SELECTOR,
         '#messages > div.alert.alert-safe.alert-noicon.alert-info.fade.in > div > p:nth-child(1) > strong')
     ADD_TO_BASKET = (By.CSS_SELECTOR, '#add_to_basket_form > button')
+
+
+class BasePageLocators:
+    LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
+    LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
