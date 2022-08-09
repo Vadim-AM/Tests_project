@@ -11,6 +11,7 @@ class LoginPageLocators:
 
 
 class ProductPageLocators:
+    SUCCESS_MESSAGE = (By.CSS_SELECTOR, ".alert-success")
     TITLE = (By.CSS_SELECTOR, '#content_inner > article > div.row > div.col-sm-6.product_main > h1')
     BASKET_TITLE = (By.CSS_SELECTOR, '#messages > div:nth-child(1) > div > strong')
     PRICE = (By.CSS_SELECTOR, '#content_inner > article > div.row > div.col-sm-6.product_main > p.price_color')
