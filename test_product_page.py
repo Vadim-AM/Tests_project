@@ -14,6 +14,7 @@ test_link = "http://selenium1py.pythonanywhere.com/en-gb/catalogue/the-city-and-
 basket_link = 'http://selenium1py.pythonanywhere.com/en-gb/basket/'
 
 
+@pytest.mark.need_review
 @pytest.mark.parametrize('num', [*range(1, 7), pytest.param(7, marks=pytest.mark.xfail), *range(8, 10)])
 def test_guest_can_add_product_to_basket(browser, num):
     page = ProductPage(browser, link)
@@ -53,12 +54,14 @@ def test_guest_should_see_login_link_on_product_page(browser):
     page.should_be_login_link()
 
 
+@pytest.mark.need_review
 def test_guest_can_go_to_login_page_from_product_page(browser):
     page = ProductPage(browser, test_link)
     page.open()
     page.go_to_login_page()
 
 
+@pytest.mark.need_review
 def test_guest_cant_see_product_in_basket_opened_from_product_page(browser):
     page = ProductPage(browser, link)
     page.open()
@@ -82,6 +85,7 @@ class TestUserAddToBasketFromProductPage:
         self.login_page.should_be_authorized_user()
         return browser
 
+    @pytest.mark.need_review
     def test_user_can_add_product_to_basket(self, browser):
         page = ProductPage(browser, test_link, timeout=0)
         page.open()
