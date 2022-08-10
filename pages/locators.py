@@ -6,6 +6,10 @@ class MainPageLocators:
 
 
 class LoginPageLocators:
+    REG_EMAIL_FORM = (By.ID, 'id_registration-email')
+    REG_PASSWORD_FORM = (By.ID, 'id_registration-password1')
+    SUBMIT_PASSWORD = (By.ID, 'id_registration-password2')
+    REGISTER_BUTTON = (By.NAME, 'registration_submit')
     LOGIN_FORM = (By.ID, 'login_form')
     REGISTRATION_FORM = (By.ID, 'register_form')
 
@@ -22,6 +26,7 @@ class ProductPageLocators:
 
 
 class BasePageLocators:
+    USER_ICON = (By.CSS_SELECTOR, ".icon-user")
     LOGIN_LINK = (By.CSS_SELECTOR, "#login_link")
     LOGIN_LINK_INVALID = (By.CSS_SELECTOR, "#login_link_inc")
     BASKET_LINK = (
